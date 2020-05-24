@@ -1,4 +1,7 @@
 <include a CircleCI status badge, here>
+# Template:
+[![nenefox](https://circleci.com/gh/nenefox/lesson5-project.svg?style=svg)](https://circleci.com/gh/nenefox/lesson5-project)
+
 
 ## Project Overview
 
@@ -40,3 +43,4 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 * Setup and Configure Kubernetes locally
 * Create Flask app in Container
 * Run via kubectl
+
