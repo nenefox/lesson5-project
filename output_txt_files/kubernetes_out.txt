@@ -1,1 +1,21 @@
-<paste log output from Kubernetes-mediated prediction, here>
+lap.minguez (master *) lesson5-project
+$ ./run_kubernetes.sh testing2
+pod/nenefoxdemo created
+NAME          READY   STATUS              RESTARTS   AGE
+nenefoxdemo   0/1     ContainerCreating   0          1s
+error: unable to forward port because pod is not running. Current status=Pending
+
+lap.minguez (master *) lesson5-project
+$ kubectl get pods
+NAME          READY   STATUS    RESTARTS   AGE
+nenefoxdemo   1/1     Running   0          113s
+
+lap.minguez (master *) lesson5-project
+$ ./run_kubernetes.sh testing2
+Error from server (AlreadyExists): pods "nenefoxdemo" already exists
+NAME          READY   STATUS    RESTARTS   AGE
+nenefoxdemo   1/1     Running   0          17s
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+
+Handling connection for 8000

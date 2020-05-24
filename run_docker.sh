@@ -10,9 +10,11 @@ if [ $# -eq 0 ]
     exit 1
 fi
 
+# Creating dockerpath to be able to push image
+dockerpath="nenefox/$1"
 # Step 1:
 # Build image and add a descriptive tag
-docker build --tag=$1 .
+docker build --tag=$dockerpath .
 
 # Step 2: 
 # List docker images
