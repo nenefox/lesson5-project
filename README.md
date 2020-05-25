@@ -1,7 +1,27 @@
-<include a CircleCI status badge, here>
-# Template:
 [![nenefox](https://circleci.com/gh/nenefox/lesson5-project.svg?style=svg)](https://circleci.com/gh/nenefox/lesson5-project)
 
+## Create and run docker image
+'''
+./run_docker.sh username image_name
+'''
+
+You need to provide the DockerHub username and the image name
+
+## Upload Image 
+'''
+./upload_docker.sh username image_name
+'''
+
+You need to provide the DockerHub username and the image name
+
+## Run Kubernetes 
+Make sure Kubernetes or minikube is running
+
+'''
+./run_kubernetes.sh username image_name
+'''
+
+You need to provide the DockerHub username and the image name
 
 ## Project Overview
 

@@ -3,16 +3,17 @@
 
 # Assumes that an image is built via `run_docker.sh`
 #Validating arguments for image name
-if [ $# -eq 0 ]
+if [ $# -ne 2 ]
   then
     echo "No arguments supplied"
-    echo "You need to provide the image name"
+    echo "You need to provide the user name andimage name"
+    echo "Luis Perez username is nenefox"
     exit 1
 fi
 
 # Step 1:
 # Create dockerpath
-dockerpath="nenefox/$1"
+dockerpath="$1/$2:latest"
 
 # Step 2:  
 # Authenticate & tag
