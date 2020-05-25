@@ -19,3 +19,28 @@ Forwarding from 127.0.0.1:8000 -> 80
 Forwarding from [::1]:8000 -> 80
 
 Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000       #receiving prediction petitions
+
+#Another terminal
+$ kubectl logs nenefoxdemo
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 294-655-389
+127.0.0.1 - - [25/May/2020 00:37:46] "GET / HTTP/1.1" 200 -
+[2020-05-25 00:51:47,197] INFO in app: JSON payload: 
+{'CHAS': {'0': 0.2}, 'RM': {'0': 60.575}, 'TAX': {'0': 200.0}, 'PTRATIO': {'0': 10.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 0.98}}
+[2020-05-25 00:51:47,211] INFO in app: Inference payload DataFrame: 
+   CHAS      RM    TAX  PTRATIO      B  LSTAT
+0   0.2  60.575  200.0     10.3  396.9   0.98
+[2020-05-25 00:51:47,222] INFO in app: Scaling Payload: 
+   CHAS      RM    TAX  PTRATIO      B  LSTAT
+0   0.2  60.575  200.0     10.3  396.9   0.98
+[2020-05-25 00:51:47,225] INFO in app: The prediction is: [20.35373177134412]
+127.0.0.1 - - [25/May/2020 00:51:47] "POST /predict HTTP/1.1" 200 -
