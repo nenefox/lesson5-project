@@ -1,6 +1,7 @@
 #udacity environment
 .devops/
 *.devops/*
+*.devops*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
